@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "bun run --watch src/main.ts",
-    "start": "bun run src/main.ts",
+    "start": "bun db:generate && bun src/main.ts",
     "db:generate": "bunx prisma generate",
     "db:push": "bunx prisma db push",
     "db:pull": "bunx prisma db pull",
