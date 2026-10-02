@@ -50,7 +50,7 @@ export default {
 	 */
 	responses: {
 		ping: {
-			reply: "Pong!",
+			reply: ({ p }) => `Pong! \`${p}ms\``,
 		},
 	},
 };

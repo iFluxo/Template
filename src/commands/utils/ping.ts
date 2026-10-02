@@ -30,6 +30,6 @@ export default class PingCommand extends Command {
 		// Either fetch the preferred locale of the user/guild and put it inside .get()
 		// Or leave empty to use the default locale (English by default)
 		const t = ctx.t.get();
-		await ctx.editOrReply({ content: t.responses.ping.reply });
+		await ctx.editOrReply({ content: t.responses.ping.reply(ctx.client.gateway.latency) });
 	}
 }

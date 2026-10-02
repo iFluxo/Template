@@ -19,7 +19,17 @@ import { middlewares } from "@/middlewares";
  * @throws {Error} Exits the process if database connection fails
  */
 async function main() {
-	const client = new Client();
+	const client = new Client({
+	    allowedMentions: {
+        parse: ["everyone", "roles", "users"],
+        replied_user: false
+    },
+    commands: {
+	    prefix: () => ["!"],
+        reply: () => true,
+        deferReplyResponse: () => ({ content: "Sending request..." }),
+    }
+	});
 
 	client.setServices({
 		cache: {
