@@ -10,5 +10,4 @@ export default config.bot({
 		components: "components",
 	},
 	intents: 129,
-	debug: process.env.BUILD_ENV === "development" ? true : false,
 });

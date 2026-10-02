@@ -31,9 +31,9 @@
 
     // Paths
     "paths": {
-			"@/*": ["./src/*"],
+      "@/*": ["./src/*"],
       "@config": ["./src/configs/main.ts"],
       "@db": ["./src/database/db.ts"]
-		}
+    }
   }
 }
